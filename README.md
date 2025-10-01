@@ -22,12 +22,17 @@ Calculate and show the outstanding debts
 ## Screenshots
 
 <img width="1893" height="1075" alt="Ekran görüntüsü 2025-10-01 140333" src="https://github.com/user-attachments/assets/b0e706ae-3d64-4751-ad3c-a636fc033bd1" />
+
 The main dashboard showing financial overview
 
+
 <img width="1555" height="442" alt="image" src="https://github.com/user-attachments/assets/655e3a11-aa5a-43e6-8e3f-36558069cbc0" />
+
 Seperate recording for each player
 
+
 <img width="1803" height="897" alt="image" src="https://github.com/user-attachments/assets/7ba9270f-479b-4f25-b2f7-83aba65e3b59" />
+
 Income records
 
 ## Installation
