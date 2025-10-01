@@ -1,0 +1,696 @@
+/* Add these to your existing CSS */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+    gap: 2rem; /* Increased gap between cards from 1rem to 2rem */
+    margin: 2rem auto; /* Adds vertical margin and centers horizontally */
+    max-width: 800px; /* Limits the total width of the card container */
+    padding: 0 1rem; /* Adds some padding on sides for smaller screens */
+}
+
+.card {
+    background: #f8f9fa; /* Light gray background */
+    border-radius: 8px; /* Increased from 5px for smoother corners */
+    padding: 2rem; /* Doubled padding from 1rem to 2rem for more space */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* More pronounced shadow */
+    transition: transform 0.3s ease; /* Adds hover effect animation */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Cards lift slightly on hover */
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.25rem; /* Increased from 1rem for better hierarchy */
+    color: #343a40; /* Dark gray color for better readability */
+    margin-bottom: 1rem; /* Added space below heading */
+}
+
+.card p {
+    font-size: 2rem; /* Increased from 1.5rem for emphasis */
+    margin-bottom: 0;
+    font-weight: italic;
+    color: #3133cd; /* Blue color for the amounts */
+}
+
+.recent-transactions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.data-table th, .data-table td {
+    height: 20px;
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background: #f8f9fa;
+    font-weight: bold;
+}
+
+.data-table tr:hover {
+    background: #f5f5f5;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+.payment-form {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-view-debts {
+    display: legacy;
+    padding: 0.01rem 0.01rem;
+    background: #3fb88b;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-left: -150px;
+}
+
+.btn-sm-view-debts {
+    padding: 0.25rem 0.01rem;
+    font-size: 0.875rem;
+}
+
+.btn:hover {
+    background: #0069d9;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    transition: opacity 0.5s ease;
+}
+
+
+.alert.error {
+    background: #f8d7da;
+    color: #721c24;
+    transition: opacity 0.5s ease;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    max-width: 500px;
+}
+
+tr.unpaid {
+    background: #fff3cd;
+}
+
+/* ===== Base Styles ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Remove default list styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/******************************************************************** ===== Header Styles ===== */
+header {
+    background-color: #250f96;
+    color: white;
+    padding: 2rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* ===== Navigation Styles ===== */
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+/* ===== Main Content Styles ===== */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+h2 {
+    color: #250f96;
+    border-bottom: 2px solid #250f96;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3, h4 {
+    color: #444;
+}
+
+/* ===== Table Styles ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* ===== Footer Styles ===== */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* ===== Transaction Lists ===== */
+.recent-transactions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.recent-expenses, .recent-incomes {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.recent-transactions ul {
+    padding-left: 1.5rem;
+}
+
+.recent-transactions li {
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px dashed #eee;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    .recent-transactions {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/*********************************************EXPENSES*************/
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;  /* Vertically centers checkbox and text */
+    gap: 8px;            /* Adds space between checkbox and text */
+    cursor: pointer;      /* Changes cursor to pointer on hover */
+}
+
+.form-group input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.form-group input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+}
+
+.form-group input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: white;
+    position: absolute;
+    left: 2px;
+    top: -2px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #0069d9;
+}
+
+/* Delete Button */
+.delete-btn {
+    color: #fff;
+    background-color: #dc3545;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Data Table ************PLAYERS TABLE************************************************/
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.data-table th, .data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+/************************************************************LOGO**************************/
+
+.club-logo {
+  height: 150px; /* Adjust as needed */
+  width: auto;
+  position: absolute;
+  right: 50px;
+  top: 5px;
+  z-index: 1000;
+} 
+
+/*OTHER OWERS*****************************************************************************/
+/* Form sections */
+.form-section {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+}
+
+.form-section h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.data-table th {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.data-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-table tr:hover {
+    background-color: #e6f7ff;
+}
+
+.btn-delete {
+    display: inline-block;
+    padding: 8px 8px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-sm-delete {
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+.btn-danger-delete {
+    background: #e74c3c;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Alerts */
+.alert {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    transition: opacity 0.5s ease;
+}
+
+.alert.success {
+    background: #25933e;
+    color: #ffffff;
+    border: 1px solid #49a85f;
+    transition: opacity 0.5s ease;
+}
+
+.alert.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    transition: opacity 0.5s ease;
+}
+
+/* Form groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/**************************************************AJAX DELETE************************************/
+/* Add to your existing CSS */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+.alert.error {
+    background-color: #f44336;
+    transition: opacity 0.5s ease;
+}
+.fa-spinner {
+    margin-right: 5px;
+}
+
+tr {
+    transition: all 0.5s ease;
+}
+
+/***********************************************TOGGLE FORM*****************************/
+.action-buttons {
+    margin-bottom: 20px;
+
+}
+
+.collapsible-form {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/*******************************************PLAYER DELETE*******************************************/
+.btn-delete-player {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.btn-delete-player:hover {
+    background-color: #c82333;
+}
+
+.btn-sm-delete-player {
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    color: white;
+    z-index: 1000;
+    transition: opacity 0.5s;
+}
+
+
+/*CURRENT DEBT DELETE**************************************************************/
+/* Add to your stylesheet */
+.btn-delete-pd {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-delete-pd:hover {
+    background-color: #c82333;
+}
+
+.btn-sm-delete-pd {
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+
+.btn-paid {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-paid:hover {
+    background-color: #218838;
+}
+
+.badge-success {
+    background-color: #28a745;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+    color: #212529;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Data Table-pl PLAYERS TABLE ***************************************************************/
+
+.player-list-table .player-actions-column {
+    white-space: nowrap; /* Prevent button wrapping */
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Keep your existing button styles */
+.btn-view-debts, .btn-delete-player {
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+/* Debt indicator styles********************************************************************** */
+/* Indicator column styling */
+.indicator-column {
+    width: 15px;
+}
+
+.indicator-cell {
+    text-align: end;
+    padding-right: 15px;
+}
+
+.debt-indicator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ffc107;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.player-table th {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.player-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.player-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.player-table tr:hover {
+    background-color: #e6f7ff;
+}
