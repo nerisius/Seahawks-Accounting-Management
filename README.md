@@ -16,7 +16,7 @@ Calculate and show the outstanding debts
 
 - **Backend:** PHP
 - **Database:** MySQL
-- **Frontend:** HTML, CSS, JavaScript
+- **Frontend:** CSS, JavaScript
 - **Admin Tool:** phpMyAdmin
 
 ## Screenshots
