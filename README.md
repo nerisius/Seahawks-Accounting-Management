@@ -12,6 +12,13 @@ Record incomes and expenses
 Track each player's debt 
 Calculate and show the outstanding debts
 
+## Technology Stack
+
+- **Backend:** PHP
+- **Database:** MySQL
+- **Frontend:** HTML, CSS, JavaScript
+- **Admin Tool:** phpMyAdmin
+
 ## Screenshots
 
 <img width="1893" height="1075" alt="Ekran görüntüsü 2025-10-01 140333" src="https://github.com/user-attachments/assets/b0e706ae-3d64-4751-ad3c-a636fc033bd1" />
@@ -36,12 +43,7 @@ Income records
 3. Configure database connection in `config/database.php`
 4. Access the website via your web server's localhost
 
-## Technology Stack
 
-- **Backend:** PHP
-- **Database:** MySQL
-- **Frontend:** HTML, CSS, JavaScript
-- **Admin Tool:** phpMyAdmin
 
 
 
