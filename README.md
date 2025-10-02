@@ -9,7 +9,9 @@ A dynamic website built with PHP to track and manage Sabancı Seahawks Ultimate 
 ## Features
 
 Record incomes and expenses
+
 Track each player's debt 
+
 Calculate and show the outstanding debts
 
 ## Technology Stack
