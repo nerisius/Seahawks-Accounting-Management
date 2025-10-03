@@ -48,7 +48,7 @@ Income records
 1. Clone the repository to htdocs
 2. Import the database schema 
 3. Configure database connection in `config/database.php`
-4. Access the website via your web server's localhost
+4. Access the website via your web server
 
 
 
